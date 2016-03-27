@@ -1,0 +1,148 @@
+! --- ~/.Xresources ------------------------------------------------------------
+!
+
+! ! --- special colors ---
+!
+*background: #F4E7D2
+*foreground: #050505
+!
+! --- standard colors ---
+!
+! white
+*color7: #151515
+!
+! bright_white
+*color15: #808080
+!
+
+! black
+*color0: #F4E7D2
+!
+! bright_black
+*color8: #707070
+!
+! red
+*color1: #C83362
+!
+! bright_red
+*color9: #AB2C54
+!
+! green
+*color2: #5AC833
+!
+! bright_green
+*color10: #4DAB2C
+!
+! yellow
+*color3: #FFAE05
+!
+! bright_yellow
+*color11: #EB9E00
+!
+! blue
+*color4: #6888AF
+!
+! bright_blue
+*color12: #5577A0
+!
+! magenta
+*color5: #24B28A
+!
+! bright_magenta
+*color13: #209D7A
+!
+! cyan
+*color6: #7E989A
+!
+! bright_cyan
+*color14: #7E989A
+!
+
+
+
+Xft.autohint: 1
+!Xft.lcdfilter:  lcddefault
+!Xft.hintstyle:  hintfull
+!Xft.hinting: 0
+Xft.antialias: 1
+!Xft.rgb: rgb
+!Xft.dpi:  96
+
+URxvt*geometry: 90x20
+urxvt*imLocale:en_US.utf8
+urxvt*underlineColor:#9baccd
+urxvt*buffered:true
+urxvt*inheritPixmap:false
+urxvt*scrollWithBuffer:false
+!urxvt*scrollTtyOutput:false
+!urxvt*scrollTtyKeypress:true
+!
+!URxvt.depth: 32 bug with 2bwm removes the border
+!URxvt.borderColor: #222222
+!urxvt fonts:
+URxvt*font: xft:EnvyCode R:pixelsize=14
+URxvt*boldFont: xft:EnvyCode R:pixelsize=14:style=bold
+urxvt*letterSpace: 0
+!URxvt*font: xft:andale mono:pixelsize=23
+!URxvt*boldFont: xft:andale mono:pixelsize=23
+!urxvt*letterSpace: 0
+
+
+
+!enabling clickable links
+URxvt.perl-ext-common: default,matcher,vtwheel,clipboard,url-select,bell-command,keyboard-select,tabbedex
+!tabbed
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher:   /usr/bin/firefox
+URxvt.url-select.autocopy:  true
+URxvt.url-select.underline: true
+
+
+URxvt.matcher.button:   1
+!URxvt.perl-ext:      default,url-select
+URxvt.keysym.M-a: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+
+!disable the fucking bell
+URxvt.insecure: true
+URxvt.urgentOnBell: true
+!URxvt.bell-command: notify-send "Beep, Beep"
+URxvt.bell-command: beep -f 5 -r 3 -l 2
+
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+
+!urxvt scrolling options and cursor style:
+
+
+URxvt*saveLines: 400
+urxvt*scrollBar_floating:true
+!URxvt.scrollBar_right: true
+!URxvt*scrollstyle:plain
+URxvt.scrollBar: false
+URxvt*cursorBlink: true
+URxvt*cursorUnderline: true
+URxvt*cursorColor: #050505
+URxvt.cursorColor2:#050505
+URxvt*pointerBlank: false
+
+!!
+
+URxvt.tabbed.autohide: yes
+URxvt.tabbed.tabbar-fg: 5
+URxvt.tabbed.tabbar-bg: 1
+URxvt.tabbed.tab-fg:    8
+URxvt.tabbed.tab-bg:    1
+URxvt.tabbed.title: no
+URxvt.tabbed.new-button:  no
+
+
+urxvt*allow_bold: false
+
+
+!URxvt.transparent: true
+! URxvt.shading: 0 to 99 darkens, 101 to 200 lightens
+!urXVt.shading: 10
+
+! FUll screen
+!URxvt.keysym.F11: perl:fullscreen:switch
